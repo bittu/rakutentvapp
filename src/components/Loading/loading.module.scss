@@ -1,15 +1,25 @@
+@import '../../styles/variables';
+
 .loading {
   position: absolute;
   top: calc(50% - (20px / 2));
   left: calc(50% - (20px / 2));
   width: 20px;
   height: 20px;
-  background-color: #000;
+  background-color: $black;
   background-image: url('../../assets/fallback.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 1200px 60px;
-  :global {
-    animation: rotate 1s infinite steps(59);
+  animation: rotate 1s infinite steps(59);
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0 -40px;
+  }
+
+  100% {
+    background-position: -1180px -40px;
   }
 }

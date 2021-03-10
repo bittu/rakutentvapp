@@ -4,13 +4,12 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  // align-self: flex-start;
   background: transparent;
   border: none;
   border-radius: 5px;
   color: $light-white;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   cursor: pointer;
   outline: 0;
@@ -36,12 +35,9 @@
   }
 
   .text {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     display: block;
     color: $white;
     font-size: 10px;
-    font-family: NotoSans-Bold,Arial,sans-serif;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -68,7 +64,7 @@
     transition: background-color .1s ease,border .1s ease;
 
     &:hover {
-      color: #f5c518;
+      color: $yellow;
     }
 
     @media (min-width: 340px) {

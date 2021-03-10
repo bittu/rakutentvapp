@@ -1,5 +1,4 @@
 @import '../../styles/variables';
-@import '../../styles/mixins';
 
 .score {
   position: relative;
@@ -16,21 +15,18 @@
   transform-origin: 50% 50%;
 }
 .circle {
-  stroke: #b8d916;
+  stroke: $green;
 }
 .circleBg {
   stroke: #d9d9d9;
 }
 .label {
-  color: #252525;
+  color: $light-snow;
   font-size: 24px;
   letter-spacing: -2px;
-  font-family: NotoSans-Bold,Arial,sans-serif;
   font-weight: 700;
 }
 .title {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin-top: 10px;
   width: 100px;
   font-size: 13px;

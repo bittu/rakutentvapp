@@ -8,7 +8,6 @@ import classes from './header.module.scss'
 
 const Header = () => {
   const location = useLocation()
-  console.log(location)
 
   const isTrailerPage = location.pathname.indexOf('/trailer') !== -1
   return (

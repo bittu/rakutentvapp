@@ -1,10 +1,8 @@
 @import '../../styles/variables';
 
 .icon {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: $white;
-  font-family: Glyphs;
+  font-family: $rtv-glyphs;
   font-size: 34px;
   transition: color .2s ease;
 

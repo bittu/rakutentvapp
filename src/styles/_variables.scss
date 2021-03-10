@@ -3,48 +3,19 @@
 // ==============================================
 
 /* Colors */
-$charcoal: #221c28;
-$slate-grey: #4e4953;
-$brownish-grey: #666666;
-$watch-blue: #00a0d6;
-$violet-blue: #6400aa;
-$white: #ffffff;
-$light-white: #ebebeb;
-$transclucent: hsla(0, 0%, 100%, 0.2);
-$pink: #e60050;
-$black: #000000;
-$yellow: #e1b813;
-$red: #df1f4c;
-$snow: #fafafa;
-$tomato: #ff5a4b;
-$topaz: #7b728c;
-$very-light-grey: #cccccc;
-$very-light-white: #9d9ba0;
-
 $body-bg-color: #101010;
 $content-bg-color: #171717;
-
+$yellow: #f5c518;
+$snow: #f1f1f1;
+$light-grey: #737373;
+$light-snow: #d9d9d9;
+$slight-black: #252525;
+$brownish-grey: #a8a8a8;
+$green: #b8d916;
+$black: #000000;
+$white: #ffffff;
+$light-white: #ebebeb;
 
 /* Font Family */
 $rtv-font: 'Noto Sans', sans-serif;
-
-/* Header heights */
-$desktop-header: 98px;
-$tablet-header: 50px;
-$tablet-header-subnav: 85px;
-$misc-header: 70px;
-
-:export {
-  desktopHeader: $desktop-header;
-  tabletHeader: $tablet-header;
-  charcoal: $charcoal;
-}
-
-/* Offcanvas menu widths */
-$tablet-offcanvas: 340px;
-$mobile-offcanvas: 254px;
-
-/* Details widths */
-$desktop-details: 774px;
-$tablet-details: 608px;
-$mobile-details: 100%;
+$rtv-glyphs: Glyphs;

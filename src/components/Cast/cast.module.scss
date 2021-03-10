@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .cast {
   margin: 0 10px 0 0;
   width: 80px;
-  color: #252525;
+  color: $slight-black;
   transition: color .1s ease;
 }
 
@@ -21,8 +23,6 @@
   white-space: normal;
   line-height: 140%;
   text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   padding-top: 5px;
   overflow: hidden;
 }
@@ -32,8 +32,5 @@
   white-space: normal;
   line-height: 140%;
   text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: NotoSans-Bold,Arial,sans-serif;
   font-weight: 700;
 }

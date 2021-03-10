@@ -4,7 +4,8 @@
 
 @import './variables';
 
-body {
+body,
+* {
   font-family: $rtv-font, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

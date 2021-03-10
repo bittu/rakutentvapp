@@ -42,8 +42,6 @@
   }
 
   .title {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -52,7 +50,7 @@
     padding: 75% 15px 0;
     align-items: center;
     justify-content: center;
-    color: #737373;
+    color: $light-grey;
     font-size: 12px;
     text-align: center;
     line-height: 140%;
