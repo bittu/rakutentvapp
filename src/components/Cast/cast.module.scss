@@ -1,0 +1,39 @@
+.cast {
+  margin: 0 10px 0 0;
+  width: 80px;
+  color: #252525;
+  transition: color .1s ease;
+}
+
+.castImage {
+  width: 100%;
+  height: 120px;
+  background-image: url(https://prod1-kraken-cloudfront.rakuten.tv/images/placeholders/cast/positive-4a94b4434c.png);
+  background-size: cover;
+  border-radius: 2px;
+  transition: background-image .2s ease;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.castName {
+  font-size: 13px;
+  white-space: normal;
+  line-height: 140%;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+.director {
+  font-size: 13px;
+  white-space: normal;
+  line-height: 140%;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: NotoSans-Bold,Arial,sans-serif;
+  font-weight: 700;
+}

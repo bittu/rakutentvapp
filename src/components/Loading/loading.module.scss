@@ -1,0 +1,15 @@
+.loading {
+  position: absolute;
+  top: calc(50% - (20px / 2));
+  left: calc(50% - (20px / 2));
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  background-image: url('../../assets/fallback.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1200px 60px;
+  :global {
+    animation: rotate 1s infinite steps(59);
+  }
+}

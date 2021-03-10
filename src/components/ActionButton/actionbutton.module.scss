@@ -1,0 +1,91 @@
+@import '../../styles/variables';
+
+.actionbutton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // align-self: flex-start;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  color: $light-white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  vertical-align: baseline;
+  padding: 10px 30px;
+  text-transform: none;
+  text-shadow: none;
+  font-style: normal;
+  text-decoration: none;
+  user-select: none;
+  transition: opacity .3s ease, background-color .3s ease, color .3s ease;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: 55px;
+  width: 80px;
+  flex-direction: column;
+
+  @media (min-width: 910px){
+    width: 110px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    color: $white;
+    font-size: 10px;
+    font-family: NotoSans-Bold,Arial,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba($black, .8);
+    line-height: 130%;
+    transition: color .1s ease;
+
+    @media (min-width: 560px) {
+      font-size: 12px;
+    }
+  }
+
+  .icon {
+    display: flex;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black, .7);
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba($black, .5);
+    cursor: pointer;
+    transition: background-color .1s ease,border .1s ease;
+
+    &:hover {
+      color: #f5c518;
+    }
+
+    @media (min-width: 340px) {
+      width: 80px;
+      height: 80px;
+
+      &::before {
+        font-size: 40px;
+      }
+    }
+    @media (min-width: 910px) {
+      width: 110px;
+      height: 110px;
+
+      &::before {
+        font-size: 58px;
+      }
+    }
+  }
+}

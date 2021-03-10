@@ -1,0 +1,23 @@
+@import 'styles/main';
+@import 'styles/variables';
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $rtv-font;
+  background-color: $body-bg-color;
+  color: $white;
+}
+
+@media (min-width: 1025px) {
+  #root {
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.parallax {
+  position: relative;
+  height: calc(100vh - 50px);
+  min-height: 455px;
+  background-image: url(../../assets/negative-parallax.png);
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 215%;
+  transition: height .1s linear,background-image .2s ease, background-position .2s linear;
+  transform: translateZ(0);
+  will-change: background-position;
+  z-index: 1;
+
+  @media (min-width: 560px) {
+    height: 570px;
+    background-size: cover;
+  }
+
+  @media (min-width: 910px) {
+    height: 620px;
+  }
+}

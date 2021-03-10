@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+  font-family: Glyphs;
+  font-size: 34px;
+  transition: color .2s ease;
+
+  &.arrowLeft::before {
+    content: '\e637';
+  }
+  &.arrowRight::before {
+    content: '\e638';
+  }
+  &.play::before {
+    content: '\e614';
+  }
+  &.wishlist::before {
+    content: '\e615';
+  }
+  &.parental::before {
+    content: '\e61c';
+  }
+  &.calendar::before {
+    content: '\e670';
+  }
+  &.country::before {
+    content: '\e63c';
+  }
+  &.info::before {
+    content: '\e601';
+  }
+  &.languages::before {
+    content: '\e63d';
+  }
+  &.clapper::before {
+    content: '\e66f';
+  }
+  &.star::before {
+    content: '\e61a';
+  }
+  &.genres::before {
+    content: '\e64b';
+  }
+}
