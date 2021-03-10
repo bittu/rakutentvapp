@@ -1,7 +1,6 @@
-import { noop } from 'lodash'
 import React, { Fragment, useEffect, useState } from 'react'
 import cn from 'classnames'
-import { useParams } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 import ActionButton from '../components/ActionButton/ActionButton'
 import { Carousel, CarouselItem } from '../components/Carousel/Carousel'
 import Cast from '../components/Cast/Cast'
@@ -12,10 +11,12 @@ import Score from '../components/Score/Score'
 import { getMovieData } from '../service/api'
 
 import classes from './pagestyles.module.scss'
+import { Helmet } from 'react-helmet'
 
-const DetailPage = () => {
+const MoviePage = () => {
   const { id } = useParams()
   const [data, setData] = useState(null)
+  const history = useHistory();
 
   useEffect(() => {
     getMovieData(id)
@@ -26,16 +27,21 @@ const DetailPage = () => {
     <div className={classes.details}>
       {data ? (
         <Fragment>
+          <Helmet>
+            <title>{data.title} - Rakuten TV</title>
+          </Helmet>
           <Parallax src={data.images.snapshot}>
               <div className={classes.buttonContainer}>
                 <ActionButton
                   text="Trailer"
-                  onClick={noop}
+                  onClick={() => {
+                    history.push(`/movie/${id}/trailer`);
+                  }}
                   icon={Icons.PLAY}
                 />
                 <ActionButton
                   text="Add to Whishlist"
-                  onClick={noop}
+                  onClick={() => {}}
                   icon={Icons.WISHLIST}
                 />
               </div>
@@ -119,8 +125,9 @@ const DetailPage = () => {
                     <div style={{display: 'flex'}}>
                       {data.scores.map(score => (
                         <Score
+                          key={score.id}
                           percentage={score.score / score.site.scale * 100}
-                          label={score.score}
+                          label={''+score.score}
                           title={score.site.name}
                           link={score.href}
                         />
@@ -137,6 +144,7 @@ const DetailPage = () => {
                     <div style={{display: 'flex'}}>
                       {data.genres.map(genre => (
                         <Cast
+                          key={genre.id}
                           src={genre.additional_images.icon}
                           name={genre.name}
                           className={classes.genre}
@@ -156,4 +164,4 @@ const DetailPage = () => {
   )
 }
 
-export default DetailPage
+export default MoviePage

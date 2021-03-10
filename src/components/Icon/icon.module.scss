@@ -44,4 +44,7 @@
   &.genres::before {
     content: '\e64b';
   }
+  &.leftArrow::before {
+    content: '\e628';
+  }
 }

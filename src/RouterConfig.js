@@ -1,7 +1,8 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import DetailPage from './pages/DetailPage'
+import MoviePage from './pages/MoviePage'
 import HomePage from './pages/HomePage'
+import TrailerPage from './pages/TrailerPage'
 
 const RouterConfig = () => {
   return (
@@ -14,11 +15,18 @@ const RouterConfig = () => {
         <HomePage />
       </Route>
       <Route
-        key="detailRoute"
-        path="/detail/:id"
+        key="trailerRoute"
+        path="/movie/:id/trailer"
         exact
       >
-        <DetailPage />
+        <TrailerPage />
+      </Route>
+      <Route
+        key="movieRoute"
+        path="/movie/:id"
+        exact
+      >
+        <MoviePage />
       </Route>
       <Route render={() => <Redirect to='/' />} />
     </Switch>

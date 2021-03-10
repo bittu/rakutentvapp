@@ -12,6 +12,10 @@
   @media (min-width: 1025px) {
     background: $black;
   }
+
+  &.hide {
+    display: none;
+  }
 }
 .navLogo {
   display: inline-block;

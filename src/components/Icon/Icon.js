@@ -16,7 +16,8 @@ export const Icons = {
   LANGUAGES: 'languages',
   CLAPPER: 'clapper',
   STAR: 'star',
-  GENRES: 'genres'
+  GENRES: 'genres',
+  LEFT_ARROW: 'leftArrow'
 }
 
 const IconClasses = {
@@ -32,6 +33,7 @@ const IconClasses = {
   [Icons.CLAPPER]: classes.clapper,
   [Icons.STAR]: classes.star,
   [Icons.GENRES]: classes.genres,
+  [Icons.LEFT_ARROW]: classes.leftArrow
 }
 
 const Icon = ({ use, className }) => {
