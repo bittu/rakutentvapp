@@ -1,34 +1,55 @@
-import React, { useEffect, useState } from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Loading from './components/Loading/Loading';
 import Header from './components/Header/Header';
-import { useData } from './contexts/DataContext';
+import { DataContext, useData } from './contexts/DataContext';
 import RouterConfig from './RouterConfig';
 import { initApp } from './service/api';
 
-const App = () => {
-  const [loading, setLoading] = useState(true)
-  const { setData } = useData()
+class App extends Component {
 
-  useEffect(() => {
+  state = {
+    loading: true
+  }
+
+  componentDidMount() {
     initApp()
       .then(data => {
-        setData(data)
-        setLoading(false)
+        this.context.setData(data)
+        this.setState({
+          loading: false
+        })
       })
-  }, [])
+  }
 
-  return (
-    loading ? (
-      <Loading />
-    ) : (
-      <Router>
-        <Header />
-        <RouterConfig />
-      </Router>
-    )
-  );
-};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
+  render() {
+    const {
+      loading,
+      hasError
+    } = this.state
+
+    return (
+      loading ? (
+        <Loading />
+      ) : hasError ? (
+        <div className="error">
+          <span>Oops! Something went wrong!</span>
+          <span>Damn gerbils have stopped running again! Someone has been dispatched to poke them with a sharp stick.</span>
+        </div>
+      ) : (
+        <Router>
+          <Header />
+          <RouterConfig />
+        </Router>
+      )
+    );
+  }
+}
+
+App.contextType = DataContext
 export default App;
